@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title>Contact Card | CS 100 Web Fundamentals — Advanced jQuery | Coding Dojo</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Description goes here."/>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+			
+			$("#add-new-user form").submit(function(){
+
+				var $new_card = $('<div class="card">');
+
+				$(this).find('input[type=text]').each(function() {
+					var $add_name = $('<h3>');
+					var text = $(this).val();
+					$add_name.html(text);
+					console.log($add_name.html());
+					$new_card.append($add_name);
+				});
+
+				$('#display-new-user').append($new_card);
+
+			    return false;
+			})
+
+			$(document).on('click', '.card', function(){
+				var $description = $('#description').val();
+		        $(this).append($description);
+		     })
+
+        
+        });
+	
+	</script>
+</head>
+<body>	
+	<div class="row first">
+		<div id="add-new-user" class="column clearfix">
+			<h2>Add a New User</h2>
+			<form method="post">
+				<p>
+					<label for="first-name">First Name:</label> 
+					<input class="user-info" id="first-name" type="text" placeholder="First Name">
+				</p>
+				<p>
+					<label for="last-name">Last Name:</label> 
+					<input class="user-info" id="last-name" type="text" placeholder="Last Name">
+				</p>
+				<p>
+					<label for="description">Description:</label> 
+					<textarea class="user-info" id="description" rows="10" cols="18">
+					</textarea>
+				</p>
+				<button type="submit">Add User</button>
+			</form>
+		</div>	
+		<div id="display-new-user" class="column">
+		</div>
+	</div>		
+</body>
+</html>

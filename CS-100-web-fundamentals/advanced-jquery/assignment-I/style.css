@@ -1,0 +1,62 @@
+/* CSS */
+
+/* Global */
+body {
+	color: #333;
+	font-size: 13px;
+}
+h1, h2, h3 {
+	font-family: Georgia, sans-serif;
+	font-weight: normal;
+}
+h1 {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 2em;
+}
+p {
+	color: #999;
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.25em;
+}
+button {
+	cursor: pointer;
+}
+table, th, td {
+    border: 1px solid #666;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 20px;
+}
+table th {
+	font-family: Georgia, sans-serif;
+	font-weight: normal;
+}
+table td {
+	color: #999;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+/* Layout */
+.row {
+	margin: 0 auto 20px auto;
+	padding: 0 10px 20px 10px;
+	width: 960px;
+}
+.row.first {
+	padding: 60px 10px 40px 10px;
+}
+.column {
+	display: inline-block;
+	vertical-align: middle;
+}
+.clearfix,
+.clearfix:after {
+	clear: both;
+	zoom: 1;
+}
+
+/* Main */
+
+

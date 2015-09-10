@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Coding Dojo Pre-Bootcamp | jQuery Excercises, Assignment II</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="CodingDojo jQuery excercises"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+        	//attach a click event listener to all the img tags when the document is ready to make ninjas disappear 
+            $(".ninja img").click(function(){
+                $(this).fadeOut("slow");
+            })
+            //attach a click event listener to the button when the document is ready to restore ninjas
+            $("button").click(function(){
+                $(".ninja img").fadeIn("slow");
+            })
+        });
+	</script>
+</head>
+<body>	
+	<div class="row first">
+		<h1>Disappearing Ninjas</h1>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>
+		<div class="column ninja">
+			<img src="images/penguin-ninja.png" alt="A penguin enjoys being a Ninja."/>
+		</div>	
+		<button>Restore Ninjas</button>
+	</div>		
+</body>
+</html>

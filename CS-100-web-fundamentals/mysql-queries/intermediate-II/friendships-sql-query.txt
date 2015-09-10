@@ -1,0 +1,3 @@
+SELECT * FROM users
+LEFT JOIN friendships ON user_id = users.id 
+LEFT JOIN users as users2 ON users2.id = friendships.friend_id;

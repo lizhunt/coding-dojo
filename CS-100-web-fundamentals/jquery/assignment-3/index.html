@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>Coding Dojo Pre-Bootcamp | jQuery Excercises, Assignment III</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="CodingDojo jQuery excercises"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// When you click on an image, replace it's source.
+			$("#ninja-cat-0").click(function(){
+				this.src= "images/cat0.png"
+				console.log('data-alt-src value is', $(this).attr('data-alt-src'));	
+			})
+			$("#ninja-cat-1").click(function(){
+				this.src= "images/cat1.png"
+				console.log('data-alt-src value is', $(this).attr('data-alt-src'));	
+			})
+			$("#ninja-cat-2").click(function(){
+				this.src= "images/cat2.png"
+				console.log('data-alt-src value is', $(this).attr('data-alt-src'));	
+			})
+			$("#ninja-cat-3").click(function(){
+				this.src= "images/cat3.png"
+				console.log('data-alt-src value is', $(this).attr('data-alt-src'));	
+			})
+			$("#ninja-cat-4").click(function(){
+				this.src= "images/cat4.png"
+				console.log('data-alt-src value is', $(this).attr('data-alt-src'));	
+			})
+        });
+	</script>
+</head>
+<body>	
+	<div class="row first">
+		<h1>Ninja to Cat</h1>
+		<!-- 0 -->
+		<img id="ninja-cat-0" src="images/ninja0.png" data-alt-src="images/cat0.png" alt="Ninja to Cat, Piece 0."/>
+		<!-- 1 -->
+		<img id="ninja-cat-1" src="images/ninja1.png" data-alt-src="images/cat1.png" alt="Ninja to Cat, Piece 1."/>
+		<!-- 2 -->
+		<img id="ninja-cat-2" src="images/ninja2.png" data-alt-src="images/cat2.png" alt="Ninja to Cat, Piece 2."/>
+		<!-- 3 -->
+		<img id="ninja-cat-3" src="images/ninja3.png" data-alt-src="images/cat3.png" alt="Ninja to Cat, Piece 3."/>	
+		<!-- 4 -->
+		<img id="ninja-cat-4" src="images/ninja4.png" data-alt-src="images/cat4.png" alt="Ninja to Cat, Piece 4."/>	
+	</div>		
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* CSS */
+
+/* Global */
+body {
+	background: #eee;
+	color: #333;
+	font-size: 13px;
+}
+h1, h2, h3 {
+	font-family: Georgia, sans-serif;
+	font-weight: normal;
+}
+h1 {
+	font-size: 3em;
+}
+p {
+	color: #999;
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.25em;
+}
+button {
+	cursor: pointer;
+}
+h2 code {
+	font-weight: bold;
+}
+h2 {
+	margin: 0 0 20px 0;
+}
+code {
+	color: #333;
+}	
+
+/* Layout */
+.row {
+	margin: 0 auto 20px auto;
+	padding: 0 10px 20px 10px;
+	width: 960px;
+}
+.column {
+	display: inline-block;
+	vertical-align: top;
+}
+.clearfix,
+.clearfix:after {
+	clear: both;
+	zoom: 1;
+}
+
+
+/* Main */
+.demo {
+	margin-right: 2%;
+	text-align: center;
+	width: 20%;
+}
+.description {
+	width: 75%;
+}
+.row.first {
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+}
+.row.last {
+	padding: 0 10px 80px 10px;
+}
+.class-added {
+	font-weight: bold;
+}
+.square {
+	background: #33cccc;
+	float: left;
+}
+.slidetoggle.square {
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+ }
+ .slidetoggle.still {
+    background: #999;
+    width: 5px;
+  }
+ .slidetoggle.hider {
+    display: none;
+ }
+ #slidetoggle-content p span {
+ 	color: #33cccc;
+ }
+ #focus p {
+ 	color: ##33cccc;;
+ }
+	

@@ -1,0 +1,255 @@
+/* CSS */
+
+/* Global */
+body {
+	background-color: #4d6861;
+	/*background-color: #1f3037;*/
+	color: #8eb6b6;
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+}
+p {
+	line-height: 1.25em;
+}
+a {
+	color: #fffea2;	
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}	
+button {
+	cursor: pointer;
+}
+
+/* Layout */
+.row {
+	margin: 0 auto;
+	width: 900px;
+}
+.column {
+	display: inline-block;
+	vertical-align: top;
+}
+.clearfix,
+.clearfix:after {
+	clear: both;
+	zoom: 1;
+}
+
+/* General */
+.gradient {
+	/* can be treated like a fallback */
+	background-color: #43545b;
+
+	/* will be "on top", if browser supports it */
+	background-image: linear-gradient(#43545b, #1f3037);
+
+	/* these will reset other properties, like background-position, but it does know what you mean */
+	background: #43545b;
+	background: linear-gradient(#43545b, #1f3037);
+
+	border: 1px solid #1f3037;
+}
+.gradient-secondary {
+	/* can be treated like a fallback */
+	background-color: #263b40;
+
+	/* will be "on top", if browser supports it */
+	background-image: linear-gradient(#263b40, #365651);
+
+	/* these will reset other properties, like background-position, but it does know what you mean */
+	background: #263b40;
+	background: linear-gradient(#263b40, #365651);
+
+	/*border: 1px solid #365651;*/
+}
+.gradient-tertiary {
+	/* can be treated like a fallback */
+	background-color: #14262a;
+
+	/* will be "on top", if browser supports it */
+	background-image: linear-gradient(#14262a, #304d4b);
+
+	/* these will reset other properties, like background-position, but it does know what you mean */
+	background: #14262a;
+	background: linear-gradient(#14262a, #304d4b);
+
+	border: 1px solid #304d4b;
+}
+
+
+/* Main */
+#header,
+#main {
+	background-color: #1f3037;
+}
+#header,
+#banner,
+#banner img {
+	border-bottom: 1px solid #000;
+}
+#header {
+	height: 91px;
+}
+#header .row {
+	position: relative;
+	height: 100%;
+}	
+#logo,
+#contact {
+	display: inline-block;
+	vertical-align: middle;
+}
+#logo {
+	margin: 0;
+	padding: 10px 0;
+	height: 30px;
+}
+#logo a {
+	color: #fff;
+}	
+#logo a span {
+	color: #8eb6b6;
+	font-weight: normal;
+}
+#contact {
+	border: 1px solid #43545b;
+	margin-top: 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}	
+#header nav {
+	display: block;
+	height: 30px;
+}
+#header nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}	
+#header nav li {
+	border-right: 1px solid #43545b;
+	display: inline-block;
+	margin-left: -1px;
+	padding: 12px 22px 10px 20px;
+	vertical-align: middle;
+}
+#header nav li a {
+	color: #8eb6b6;
+	font-weight: bold;
+}	
+#banner {
+	height: 101px;
+}
+#main .sidebar,
+#main #content {
+	height: 100%;
+}
+.search p {
+	font-size: .8em;
+	margin: 0 0 3px 0;
+}
+.search input,
+.search button {
+	display: inline-block;
+	vertical-align: middle;
+}
+.search input {
+	height: 13px;
+	width: 72%;
+}
+.search button {
+	border: 1px solid #fff;
+	margin: 0;
+	padding: 0;
+}
+.article {
+	margin-bottom: 32px;
+}	
+.article h2 {
+	color: #fff;
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: normal;
+	margin-bottom: 5px;
+}
+.article p {
+	margin-top: 0px;
+}	
+.sidebar div {
+	margin-bottom: 20px;
+}
+.notes, 
+.features,
+.advertisement,
+.box-divider {
+	border: 1px solid #43545b;
+}
+.box-divider {
+	height: 5px;	
+}
+.sidebar.left .notes h3 {
+	border-bottom: 1px solid #43545b;
+	margin: 0;
+    padding: 5px 0 8px 8px;
+}
+.notes p {
+	font-weight: bold;
+	font-size: .8em;
+	margin: 0;
+	padding: 10px;
+}
+.features p {
+	color: #fff;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: .85em;
+	margin: 0 0 10px 0;
+	padding: 2px 8px;
+}
+.sidebar.left {
+	margin-right: 15px;
+	padding-top: 10px;
+	width: 170px;
+}
+#content {
+	border-top-left-radius:3em;
+	margin: 0;
+	padding: 40px 20px 15px 35px;
+	width: 445px;
+}
+#content,
+.sidebar.right, 
+.sidebar.right .notes h3 {	
+	background-color: #2b4546;
+}
+.sidebar.right {
+	border-top-right-radius:2em;
+	margin: 0 0 0 -4px;
+	padding-top: 50px;
+	width: 209px;
+}
+.sidebar.right div {
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+}	
+.sidebar.right .advertisement {
+	text-align: center;
+	border: 2px solid #fff;
+	margin-bottom: 40px;
+}
+.sidebar.right .notes {
+	padding-top: 15px;
+	position: relative;
+}	
+.sidebar.right .notes h3 {
+	color: #fff;
+	border: 1px solid #43545b;
+	margin: -30px 0 0 10px;
+	padding: 5px;
+	position: absolute;
+}
+
+
+

@@ -1,0 +1,32 @@
+* ===================================== *
+  Terminal and Git — Assignment 1
+* ===================================== *
+
+1. Launch Terminal
+2. ls
+3. cd Desktop
+4. mkdir test
+5. ls
+6. cd test
+7. touch index.html
+8. touch styles.css
+9. touch command.txt
+10. ls
+11. cp index.html index_2.html
+12. ls
+12. cd ..
+13. ls
+14. mkdir destination
+16. cd test
+17. ls
+18. mv index_2.html ../destination/
+19. ls
+20. cd ../test
+21. ls
+22. rm styles.css
+23. ls
+24. cd ..
+25. rm -rf destination
+26. ls
+ 
+

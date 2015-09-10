@@ -1,0 +1,80 @@
+/* CSS */
+
+/* Global */
+body {
+	background: #fff;
+	color: #333;
+	font-size: 13px;
+}
+h1, h2, h3 {
+	font-family: Georgia, sans-serif;
+	font-weight: normal;
+}
+h1 {
+	font-size: 3em;
+	margin-bottom: 2em;
+}
+p {
+	color: #999;
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.25em;
+}
+button {
+	cursor: pointer;
+}
+
+/* Layout */
+.row {
+	margin: 0 auto 20px auto;
+	padding: 0 10px 20px 10px;
+	width: 960px;
+}
+.column {
+	display: inline-block;
+	vertical-align: middle;
+}
+.clearfix,
+.clearfix:after {
+	clear: both;
+	zoom: 1;
+}
+.position-relative {
+	display: block;
+	position: relative;
+}
+
+/* Main */
+.row.first {
+	text-align; center;
+	padding: 20px 10px 80px 10px;
+}	
+.coin {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+.coin.last {
+	margin-right: 0;
+}	
+#quarter {
+	background: #fff url(images/quarter-back.png) center no-repeat;
+	width: 201px;
+	height: 200px;
+}
+#nickel {
+	background: #fff url(images/nickel-back.png) center no-repeat;
+	width: 188px;
+	height: 188px;
+}
+#dime {
+	background: #fff url(images/dime-back.png) center no-repeat;
+	width: 111px;
+	height: 110px;
+}
+#penny {
+	background: #fff url(images/penny-back.png) center no-repeat;
+	width: 221px;
+	height: 221px;
+}
+
+

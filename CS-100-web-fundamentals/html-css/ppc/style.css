@@ -1,0 +1,141 @@
+/* CSS */
+
+/* Global */
+body {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+}
+h1, h2, h3, h4 {
+	color: #000;
+}
+a {
+	text-decoration: underline;
+}
+
+/* General */
+.inline-block {
+	display: inline-block;
+}
+.vertical-align-top {
+	vertical-align: top;
+}
+.vertical-align-middle {
+	vertical-align: middle;
+}
+.block-yellow {
+	background: #fff url("images/block-yellow-background-repeat.png") repeat top left;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.border-bottom {
+	border-bottom: 1px solid #333;
+}
+
+/* Main */
+.wrapper {
+	width: 970px;
+	margin: 0px auto;
+}
+#header {
+	background: #fff url("images/header-background-repeat.png") repeat-x top left;
+}
+#header span {
+	font-size: 18px;
+	font-weight: bold;
+	padding-left: 320px;
+}
+#main-navigation {
+	background: #fff url("images/main-navigation-background-repeat.png") repeat-x top left;
+	height: 30px;
+}
+#main-navigation ul {
+	margin: 0;
+	padding: 0;
+}
+#main-navigation li {
+	display: inline-block;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #ccc;
+	margin: 0 -2px;
+	padding: 8px 20px;
+	vertical-align: middle;
+}
+#main-navigation li a {
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+#main-navigation li a:hover {
+	color: #333;
+}	
+#main-content {
+	background-color: #000;
+	padding: 20px 0 40px 0;
+}
+#big-feature {
+	height: 272px;
+}
+#big-feature img {
+	border: 8px solid #fff;
+	margin-right: 15px;
+}	
+#about {
+	background-color: #747472;
+	height: 100%;
+	width: 558px;
+}
+#about h3, 
+#about p {
+	color: #fff;
+} 
+#about h3 {
+	padding: 0 20px;
+}
+#about p {
+	padding: 0 20px 0 20px;
+}
+#announcement {
+	color: #999961;
+	padding: 10px;
+}
+.small-feature {
+	background: #fff url("images/small-feature-background-repeat.png") repeat-x bottom left;
+	border: 1px solid #222222;
+	margin-right: 20px;
+	overflow: hidden;
+	position: relative;
+	height: 260px;
+	width: 222px;
+}
+.small-feature.last {
+	margin-right: 0px;
+}
+.small-feature img {
+	margin-bottom: 8px;
+}
+.small-feature p {
+	margin: 0;
+	padding: 0 10px 20px 10px;
+}
+.read-more {
+	border: 2px solid #000;
+	background-color: #ffc629;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 11px;
+	font-weight: bold;
+	padding: 5px 10px 8px 15px;
+	position: absolute;
+	text-decoration: none;
+	bottom: 10px;
+	right: 10px;
+}
+.read-more:hover {
+	text-decoration: underline;
+}	
+

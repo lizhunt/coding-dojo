@@ -1,0 +1,23 @@
+MySQL Workbench Setup
+
+1. Opened MAMP, started Apache and MySQL
+2. Opened MySQL Workbench, created local connection called ‘codingdojo’
+3. Opened twitter.sql, copy-pasted SQL commands into MySQL Workbench Editor
+4. Ran following commands:
+
+
+SELECT * FROM users WHERE id = 1;
+// Return all columns from the users table with the unique id of 1
+
+SELECT * FROM tweets WHERE id = 1;
+// Return all columns from the tweets table with the id of 1
+
+SELECT * FROM users
+WHERE users.id NOT IN (
+
+SELECT follower_id
+FROM follows
+WHERE followed_id = 2
+
+) AND users.id != 2;
+// Return all columns from the users that do not follow the user with the id of 2 

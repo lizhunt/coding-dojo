@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Coding Dojo Pre-Bootcamp | jQuery Excercises</title>
+		<meta charset="UTF-8" />
+		<meta name="description" content="CodingDojo jQuery excercises"/>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				
+				// .addClass and .removeClass
+		        $("#addClass").click(function(){
+		        	$("#add-remove-content").addClass("class-added");
+		        	console.log("A class was added.");
+		        })
+		        $("#removeClass").click(function(){
+		        	$("#add-remove-content").removeClass("class-added");
+		        	console.log("A class was removed.");
+		        })
+
+		        // .before and .after
+		        $("#before").click(function(){
+		        	$("#before-after-content").before("<h3>Hello!</h3>");
+		        	console.log("Content was added before a paragraph.");	
+		        })	
+		        $("#after").click(function(){
+		        	$("#before-after-content").after("<h3>Goodbye!</h3>");
+		        	console.log("Content was added after a paragraph.");	
+		        })
+
+		        // .prepend and .append
+		        $("#prepend").click(function(){
+		        	$("#prepend-append-content").prepend("<hr />");
+		        	console.log("Content was prepended inside a div.");	
+		        })	
+		        $("#append").click(function(){
+		        	$("#prepend-append-content").append("<hr />");
+		        	console.log("Content was appended inside a div.");	
+		        })
+
+		        // .attr and .val
+		        $("#attr-val").click(function(){
+		        	$("#attr-val-content").attr("Was the checkbox checked?");
+		        	$( "input:checkbox:checked" ).val();
+		        	alert("The checkbox is returning the value 'Checked'.");	
+		        })
+
+		        // .text and .html
+		        $("#text").click(function(){
+		        	$("#text-html-content p").text("<p>This replaces the content with new text, ignoring HTML tags.</p>");
+		        	console.log("Content inside #text-html-content was replaced with text.");	
+		        })
+		        $("#html").click(function(){
+		        	$("#text-html-content p").html("<p>This replaces the content with HTML, honoring tags.</p>");
+		        	console.log("Content inside #text-html-content was replaced with HTML.");	
+		        })
+
+		        // .toggle
+		        $("#toggle").click(function(){
+		        	$("#toggle-content p").toggle();
+		        	console.log("Content inside #toggle-content was given a good toggle.");	
+		        })
+
+		        // .hide and .show
+		        $("#hide").click(function(){
+		        	$("#show-hide-content p").hide();
+		        	console.log("Content inside #show-hide-content was hidden.");	
+		        })
+		        $("#show").click(function(){
+		        	$("#show-hide-content p").show();
+		        	console.log("Content inside #show-hide-content was shown.");		
+		        })
+
+		        // .slideUp and .slideDown
+		        $("#slideUp").click(function(){
+		        	$("#slideup-slidedown-content p").slideUp("slow");
+		        	console.log("Content inside #slideup-slidedown-content slid up.");	
+		        })
+		        $("#slideDown").click(function(){
+		        	$("#slideup-slidedown-content p").slideDown("slow");
+		        	console.log("Content inside #slideup-slidedown-content slid down.");		
+		        })
+
+		        // .slideToggle
+		        $("#slideToggle").click(function(){
+		        	$(".slidetoggle:not(.still)").slideToggle("slow", function() {
+					    var n = parseInt( $("#slidetoggle-content span").text(), 10 );
+					    $("#slidetoggle-content span").text(n + 1);
+					    console.log("Some blue-green squares are getting a good toggling!");
+					})    
+		        })
+
+		        // .fadeOut and .fadeIn
+		        $("#fadeOut").click(function(){
+		        	$("#fadein-fadeout-content p").fadeOut("slow");
+		        	console.log("Content inside #fadein-fadeout-content has faded out.");	
+		        })
+		        $("#fadeIn").click(function(){
+		        	$("#fadein-fadeout-content p").fadeIn("slow");
+		        	console.log("Content inside #fadein-fadeout-content has faded back in.");		
+		        })
+
+		        // .focus
+		        $("#focus input").focus(function(){
+		        	$("#focus").append("<p>You're really focused.</p>");
+		        })
+
+		        // .click
+		        $("#click").click(function(){
+		        	alert("You've clicked the last button. Thanks for learning jQuery with me!");
+		        })
+
+		    });
+		</script>
+	</head>
+   <body>
+   		<div class="row first">
+   			<h1>Coding Dojo Pre-Bootcamp | jQuery Excercises</h1>
+   		</div>	
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="addClass">.addClass</button>
+   				<button id="removeClass">.removeClass</button>
+   			</div>
+   			<div class="description column">
+   				<h2><code>.addClass</code>, <code>.removeClass</code></h2>
+   				<p id="add-remove-content"><code>.addClasss</code> adds the specified class(es) to each element in the set of matched elements. <br/><code>.removeClass</code> removes the specified class(es).</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="before">.before</button>
+   				<button id="after">.after</button>
+   			</div>
+   			<div class="description column">
+   				<h2><code>.before</code>, <code>.after</code></h2>
+   				<p id="before-after-content"><code>.before</code> insert content, specified by the parameter, before each element in the set of matched elements. <br/><code>.after</code> inserts content after each element.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="prepend">.prepend</button>
+   				<button id="append">.append</button>
+   			</div>
+   			<div id="prepend-append-content" class="description column">
+   				<h2><code>.prepend</code>, <code>.append</code></h2>
+   				<p><code>.prepend</code> inserts content, specified by the parameter, before each element in the set of matched elements. <br/><code>.append</code> inserts content after each element in the set of matched elements.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<input id="attr-val" type="checkbox" value="Yes it was!">
+   			</div>
+   			<div id="attr-val-content" class="description column">
+   				<h2><code>.attr</code>, <code>.val</code></h2>
+   				<p><code>.attr</code> gets the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element.<br /><code>.val</code> gets the current value of the first element in the set of matched elements or set the value of every matched element.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="text">.text</button>
+   				<button id="html">.html</button>
+   			</div>
+   			<div id="text-html-content" class="description column">
+   				<h2><code>.text</code>, <code>.html</code></h2>
+   				<p><code>.text</code> get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements. <br/><code>.html</code> gets the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="toggle">.toggle</button>
+   			</div>
+   			<div id="toggle-content" class="description column">
+   				<h2><code>.toggle</code></h2>
+   				<p><code>.toggle</code> displays or hides the matched elements. Also, bind two or more handlers to the matched elements, to be executed on alternate clicks.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="hide">.hide</button>
+   				<button id="show">.show</button>
+   			</div>
+   			<div id="show-hide-content" class="description column">
+   				<h2><code>.hide</code>, <code>.show</code></h2>
+   				<p><code>.hide</code> hides the matched elements.<br /><code>.show</code> displays the matched elements.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="slideUp">.slideUp</button>
+   				<button id="slideDown">.slideDown</button>
+   			</div>
+   			<div id="slideup-slidedown-content" class="description column">
+   				<h2><code>.slideUp</code>, <code>.slideDown</code></h2>
+   				<p><code>.slideUp</code> hides the matched elements with a sliding motion. <br/><code>.slideDown</code> displays the matched elements with a sliding motion.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="slideToggle">.slideToggle</button>
+   			</div>
+   			<div id="slidetoggle-content" class="description column">
+   				<h2><code>.slideToggle</code></h2>
+   				<p><code>.slideToggle</code> displays or hides the matched elements with a sliding motion.</p>
+   				<div></div>
+				<div class="slidetoggle square still"></div>
+				<div class="slidetoggle square" style="display:none;"></div>
+				<div class="slidetoggle square still"></div>
+				<div></div>
+				<div class="slidetoggle square still"></div>
+				<div class="slidetoggle square hider"></div>
+				<div class="slidetoggle square still"></div>
+				<div class="slidetoggle square hider"></div>
+				<div class="slidetoggle square still"></div>
+				<div></div>
+				<p class="clearfix">There have been <span>0</span> toggled squares.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div class="demo column">
+   				<button id="fadeOut">.fadeOut</button>
+   				<button id="fadeIn">.fadeIn</button>
+   			</div>
+   			<div id="fadein-fadeout-content" class="description column">
+   				<h2><code>.fadeOut</code>, <code>.fadeIn</code></h2>
+   				<p><code>.fadeOut</code> hides the matched elements by fading them to transparent.<br /> <code>.fadeIn</code> displays the matched elements by fading them to opaque. </p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row">
+   			<div id="focus" class="demo column">
+   				<input type="text" placeholder="Click inside!">
+   			</div>
+   			<div id="focus-content" class="description column">
+   				<h2><code>.focus</code></h2>
+   				<p><code>.focus</code> binds an event handler to the “focus” JavaScript event, or trigger that event on an element.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   		<div class="row last">
+   			<div class="demo column">
+   				<button id="click">.click</button>
+   			</div>
+   			<div class="description column">
+   				<h2><code>.click</code></h2>
+   				<p><code>.click</code> binds an event handler to the “click” JavaScript event, or trigger that event on an element.</p>
+   			</div>	
+   		</div>
+   		<!-- -->
+   </body>
+</html>   

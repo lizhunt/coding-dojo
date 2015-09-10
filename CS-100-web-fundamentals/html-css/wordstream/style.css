@@ -1,0 +1,246 @@
+/* CSS */
+
+/* Global */
+body {
+	background: #fff url("images/body-background-repeat.png") repeat-x top left;
+	color: #333;
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.75em;
+}
+h1, h2, h3, h4, a {
+	color: #0078b5;
+}
+a {
+	text-decoration: none;
+}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0; 
+}
+
+/* General */
+.inline-block {
+	display: inline-block;
+}
+.vertical-align-top {
+	vertical-align: top;
+}
+.vertical-align-middle {
+	vertical-align: middle;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.text-align-center {
+	text-align: center;
+}
+.text-decoration-underline,
+a.text-decoration-underline {
+	text-decoration: underline;
+}
+.button {
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+	padding: 6px;
+	text-align: center;
+	text-decoration: none;
+}
+.gradient-blue {
+	/* can be treated like a fallback */
+	background-color: #22a2df;
+
+	/* will be "on top", if browser supports it */
+	background-image: linear-gradient(#22a2df, #017dbd);
+
+	/* these will reset other properties, like background-position, but it does know what you mean */
+	background: #22a2df;
+	background: linear-gradient(#22a2df, #017dbd);
+
+	border: 1px solid #017dbd;
+}
+.gradient-orange {
+	/* can be treated like a fallback */
+	background-color: #ffa137;
+
+	/* will be "on top", if browser supports it */
+	background-image: linear-gradient(#ffa137, #e84208);
+
+	/* these will reset other properties, like background-position, but it does know what you mean */
+	background: #ffa137;
+	background: linear-gradient(#ffa137, #e84208);
+
+	border: 1px solid #e84208;
+}
+.gradient-green {
+	/* can be treated like a fallback */
+	background-color: #c3dc74;
+
+	/* will be "on top", if browser supports it */
+	background-image: linear-gradient(#c3dc74, #8baf33);
+
+	/* these will reset other properties, like background-position, but it does know what you mean */
+	background: #c3dc74;
+	background: linear-gradient(#c3dc74, #8baf33);
+
+	border: 1px solid #8baf33;
+}
+.main-blue {
+	color: #0078b5;
+}
+.main-orange {
+	color: #f83610;
+}	
+
+/* Main */
+.wrapper {
+	width: 960px;
+	margin: 0px auto;
+	position: relative;
+}
+#header {
+	height: 160px;
+}
+#logo {
+	padding: 40px 0 45px 0;
+}
+#header h1 {
+	color: #fff;
+	font-size: 24px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+#main-navigation {
+	position: absolute;
+	top: -7px;
+	right: 0;
+}
+#main-navigation ul, #main-navigation a.button,
+#main-navigation li, #breadcrumb li {
+	display: inline-block;
+}	
+#main-navigation ul {
+	background-color: #fbfbfb;
+	border: 1px solid #dbdbdb;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+	margin: 0 20px 0 0;
+	padding: 5px 20px 10px 20px;
+}
+#main-navigation li,
+#main-navigation li a {
+	color: #979797;
+}
+#main-navigation li:after {
+	content: " | ";
+}
+#main-navigation li.last:after {
+	content: "";	
+}
+#main-navigation a.button {
+	width: 60px;
+}
+#main-content {
+	padding-bottom: 40px;
+}	
+#sidebar {
+	margin-right: 45px;
+	padding-top: 70px;
+	width: 200px;
+}
+#sidebar h2 {
+	font-weight: normal;
+}	
+#sidebar h3 {
+	font-size: 1em;
+	margin: 0;
+}
+#sidebar > p {
+	margin-top: 0;
+}	
+#sidebar .advertisement {
+	background: #fff url("images/left_content_ad.png") no-repeat top center;
+	height: 250px;
+	width: 100%;
+}
+#sidebar .advertisement h2,
+#sidebar .advertisement p {
+	padding-left: 15px;
+	padding-right: 15px;
+}	
+#sidebar .advertisement h2 {
+	font-size: 15px;
+	margin: 0;
+	padding-top: 10px;
+}
+#sidebar .advertisement p {
+	color: #4c4c4c;
+	font-weight: bold;
+	line-height: 1.5em;
+}	
+#sidebar .advertisement .button {
+	margin: 0 15px;
+}
+#breadcrumb li {
+	font-weight: bold;
+	vertical-align: middle;
+}
+#breadcrumb li a {
+	text-decoration: none;
+}	
+#contact-information {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-top: 18px;
+}
+#contact-information p,
+#contact-information h3 {
+	margin: 0;
+}
+#contact-information p {
+	color: #888888;
+	font-size: .85em;
+}
+#contact-information h3 {
+	color: #45c9f9;
+	font-size: 1.75em;
+}	
+#content {
+	width: 710px;
+}
+#content hr {
+	margin-top: 45px;
+}	
+#content a {
+	text-decoration: underline;
+}
+#content ul {
+	list-style-type: square;
+	padding-left: 15px;
+}	
+#content .advertisement {
+	border: 5px solid #0078b5;
+	padding: 5px;
+}
+#content .advertisement h3 {
+	margin: 0 0 10px 0;
+}
+#content .advertisement > div {
+	width: 570px;
+}	
+#content .advertisement a.button {
+	text-decoration: none;
+	margin: 0;
+	width: 170px;
+}
+#footer {
+}

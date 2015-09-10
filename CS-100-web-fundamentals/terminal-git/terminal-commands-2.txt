@@ -1,0 +1,25 @@
+* ==================================== *
+  Terminal and Git — Assignment 2
+* ==================================== *
+
+1. *Launched Terminal*
+2. cd Desktop
+3. mkdir test
+4. cd test
+5. touch index.html styles.css
+6. *Edited and saved index.html*
+7. git init
+8. git add index.html
+9. git status
+10. git commit -m “updated html”
+11. *Edited and saved styles.css*
+12. git add styles.css
+13. git commit -m “updated css”
+14. git log
+15. git revert -n 1b707b6 
+16. ls
+17. touch index_new.html
+18. ls
+19. *Edited and saved index_new.html*
+20. git status
+21. git commit -m “Changed some things”   

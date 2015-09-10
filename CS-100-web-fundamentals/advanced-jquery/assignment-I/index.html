@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>Advanced jQuery, Assignment I | CS 100 Web Fundamentals | Coding Dojo</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Description goes here."/>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#users").submit(function(){
+
+				var $new_tr = $('<tr>');
+
+				$(this).find('input[type=text]').each(function() {
+					var $new_td = $('<td>');
+					var text = $(this).val();
+					$new_td.html(text);
+					console.log($new_td.html());
+					$new_tr.append($new_td);
+				});
+				$('table').append($new_tr);
+
+			    return false;
+			})
+        });
+	</script>
+</head>
+<body>	
+	<div class="row first">
+		<table>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email Address</th>
+				<th>Contact #</th>
+			</tr>
+			<!-- <tr id="responses">
+				<td id="first-name-response"></td>
+				<td id="last-name-repsonse"></td>
+				<td id="email-response"></td>
+				<td id="contact-response"></td>
+			</tr> -->	
+		</table>	
+	</div>
+	<div class="row">
+		<h2>Add User</h2>
+		<form id="users" method="post">
+			<p>
+				<label for="first-name">First Name:</label> 
+				<input id="first-name" type="text" placeholder="First Name">
+			</p>
+			<p>
+				<label for="last-name">Last Name:</label> 
+				<input id="last-name" type="text" placeholder="Last Name">
+			</p>
+			<p>
+				<label for="email">Email Address:</label> 
+				<input id="email" type="text" placeholder="Email Address">
+			</p>
+			<p>
+				<label for="contact">Contact #:</label> 
+				<input id="contact" type="text" placeholder="Contact #">
+			</p>
+			<button type="submit">Add User</button>
+		</form>	
+	</div>		
+</body>
+</html>

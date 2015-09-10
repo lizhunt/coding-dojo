@@ -1,0 +1,39 @@
+<html>
+<head>
+	<title>Hovering | jQuery Excercises, Assignment V | Coding Dojo</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="CodingDojo jQuery excercises"/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$(".coin").hover(function() {
+				$(this).find("img").stop(true, true).fadeOut();
+			}, function() {
+				$(this).find("img").stop(true, true).fadeIn();
+			})
+
+		});
+
+	</script>
+</head>
+<body>	
+	<div class="row first">
+		<h1>U.S. Coins</h1>
+		<div id="quarter" class="coin">
+			<img src="images/quarter-front.png" alt="A U.S. Quarter coin piece, front and back."/>
+		</div>
+		<div id="nickel" class="coin">
+			<img src="images/nickel-front.png" alt="A U.S. Nickel coin piece, front and back."/>
+		</div>
+		<div id="dime" class="coin">
+			<img src="images/dime-front.png" alt="A U.S. Dime coin piece, front and back."/>
+		</div>
+		<div id="penny" class="coin last">
+			<img src="images/penny-front.png" alt="A U.S. Penny coin piece, front and back."/>
+		</div>
+	</div>		
+</body>
+</html>

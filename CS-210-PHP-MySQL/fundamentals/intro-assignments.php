@@ -164,37 +164,32 @@
 <pre>
 <code>
 
-	// Storing all my separate lists in arrays
+	// Store all my separate lists in arrays
 
 	$to_do = array("Give dogs a bath", "Go grocery shopping", "Call Mom", "Plan vacation", "Wash windows");
 	$packing = array("2 Pairs of Pants", "Workout Clothes", "Running Shoes", "Sunglasses", "Atlas");
 	$attractions = array("Waterfall Hike", "Fancy Estate House Tour", "Wine Tasting");
 
 
-	// Creating a function to iterate through my lists and present the values as li's inside a ul
+	// Create a function to iterate through any list I specify later and present the values as a tag I define later
 
-	function print_lists($my_lists) {
+	function print_lists($my_lists, $my_type) {
 
-		echo "&lt;ul&gt;";
+		$multiply = array();
 
 		foreach($my_lists as $value){
-			echo "&lt;li&gt;{$value}&lt;/li&gt;";
+			echo "&lt;".$my_type."&gt;" . $value . "&lt;/".$my_type."&gt;";
 		}
 
-		echo "&lt;/ul&gt;";
+		return $multiply;
 		
 	}
 
-	// Calling my print_lists() function on all the lists I want to display in HTML
+	// Call my print_lists() function on the list and tag I want to display in HTML
 
-	$my_lists = print_lists($to_do);
-	echo $my_lists;
-
-	$my_lists = print_lists($packing);
-	echo $my_lists;
-
-	$my_lists = print_lists($attractions);
-	echo $my_lists;
+	$my_lists = print_lists($to_do, "p");
+	$my_lists = print_lists($packing, "span");
+	$my_lists = print_lists($attractions, "h4");
 
 </code>
 </pre>		

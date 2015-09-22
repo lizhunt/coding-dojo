@@ -87,28 +87,58 @@
 		<h3>Get Min and Max</h3>
 		<p>Create a function get_max_and_min() that takes an array of numbers and, then, returns both the minimum and the maximum number from the given array as an associative array. Do not use the PHP function max() or min() to get this to work. See if you can do this using arrays and for loops.</p>
 		<h4>Answer:</h4>
+<pre>
+<code>
+	$sample = array(135, 2.4, 2.67, 1.23, 332, 2, 1.02); 
+
+	function get_max_and_min($array) {
+
+		$min = 9999999;
+		$max = 0;
+
+		foreach($array as $value){
+		    if($min &gt; $value) {
+		        $min = $value;
+		        $array[] = $min;
+
+		    }
+		    if($max &lt; $value) {
+		    	$max = $value;
+		    	$array[] = $max;
+		    }
+		}
+
+		$new_array = array("min" =&gt; $min, "max" => $max);
+		return $new_array;	
+
+	}
+
+	$output = get_max_and_min(); 
+	var_dump($output); 
+</code>
+</pre>
 		<?php
 
 			$sample = array(135, 2.4, 2.67, 1.23, 332, 2, 1.02); 
 
-			function get_max_and_min() {
+			function get_max_and_min($array) {
 
-				$array = array();
-				$length = count($array);
+				$min = 9999999;
+				$max = 0;
 
-				for($i=0; $i<=$length; $i++) {
-
-					$value = $array[$i];
-					
-					sort($array);
-					
-					$lowest_value = reset($array);
-					$highest_value = end($array);
-
-					$array = array("min" => $lowest_value, "max" => $highest_value);
-					return $array;
-
+				foreach($array as $value){
+				    if($min > $value) {
+				        $min = $value;
+				        $array[] = $min;
+				    }
+				    if($max < $value) {
+				    	$max = $value;
+				    	$array[] = $max;
+				    }
 				}
+
+				$array = array("min" => $min, "max" => $max);
+				return $array;	
 
 
 			}
@@ -118,11 +148,6 @@
 			//$output should be equal to array('max' => 332, 'min' => 1.02);
 
 		?>
-		<!-- <p>Hello!</p> -->
-<pre>
-<code>
-</code>
-</pre>
 	</div>
 
 	<!-- Basic Assignment III -->

@@ -1,0 +1,125 @@
+/* Global */
+body {
+	background: #eee;
+	color: #333;
+	font-size: 13px;
+}
+h1, h2, h3 {
+	font-family: Georgia, sans-serif;
+	font-weight: normal;
+}
+h1 {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 2em;
+}
+p, li {
+	color: #999;
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.35em;
+}
+button {
+	cursor: pointer;
+}
+pre {
+	background-color: #fff;
+	border: 1px dashed #ccc;
+	font-weight: bold;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	text-align: left;
+	width: 99%;
+	word-wrap: break-word;
+}
+code {
+	margin: 0;
+}
+select {
+	margin-right: 10px;
+}
+table {
+	margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #333;
+    border-collapse: collapse;
+    font-family: Verdana, sans-serif;
+}
+form {
+	/*clear: both;*/
+	margin: 0 auto;
+}
+legend {
+	font-size: 16px;
+	font-weight: bold;
+}
+fieldset {
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+input {
+	/*margin-bottom: 20px;*/
+}
+button {
+}
+
+/* Layout & Helpers */
+.row {
+/*	border-bottom: 1px solid #ccc;
+*/	margin: 0 auto 20px auto;
+	padding: 0 0px 40px 0px;
+	width: 960px;
+}
+.row.first {
+	padding: 20px 10px 40px 10px;
+}
+.row.last {
+	border-bottom: 0;
+	padding: 20px 10px 120px 10px;
+}	
+.row img {
+	display: block;
+	margin: 0 auto 10px auto;
+}
+.column {
+	display: inline-block;
+	vertical-align: middle;
+}
+.clearfix,
+.clearfix:after {
+	clear: both;
+	zoom: 1;
+}
+
+.display-inline-block { display: inline-block; }
+.display-block { display: block; } 
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+.text-align-left { text-align: left; }
+.text-align-center { text-align: center; }
+.text-align-right { text-align: right; }
+
+.vertical-align-top { vertical-align: top; }
+.vertical-align-middle { vertical-align: middle; }
+.vertical-align-bottom { vertical-align: bottom; }
+
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+
+
+/* Project Specific */
+#registration {
+	width: 50%;
+}
+#registration label span,
+.error {
+	color: red;
+} 
+

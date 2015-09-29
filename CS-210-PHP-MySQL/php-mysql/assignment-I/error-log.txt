@@ -1,0 +1,20 @@
+
+/******************************************************
+
+  PHP WITH MySQL: ASSIGNMENT I — MySQL CONNECTION
+
+******************************************************/
+ 
+
+ERROR #1045: “Failed to connect to MySQL: (1045) Access denied for user 'root'@'localhost' (using password: YES)”
+FIX: Use ‘root’ as localhost password
+
+—————
+
+ERROR #1049: “Failed to connect to MySQL: (1049) Unknown database 'sakilas’”
+FIX: Check database name, ensure it exists; update with new/edited db name
+
+—————
+
+ERROR #2002: “Failed to connect to MySQL: (2002) php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known”
+FIX: Enter a correct server name, such as ‘localhost’

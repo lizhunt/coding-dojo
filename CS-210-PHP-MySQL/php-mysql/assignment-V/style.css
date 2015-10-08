@@ -1,0 +1,247 @@
+/* Global */
+body {
+	/*background: #eee;*/
+	color: #333;
+	font-size: 13px;
+	margin: 0;
+}
+h1, h2, h3, h4 {
+	font-family: Georgia, sans-serif;
+	font-weight: normal;
+}
+h1 {
+	font-size: 3em;
+	margin-bottom: 1.5em;
+}
+p, li {
+	color: #999;
+	font-family: Verdana, Arial, sans-serif;
+	line-height: 1.35em;
+}
+button {
+	cursor: pointer;
+}
+button:hover {
+	text-decoration: underline;
+}	
+pre {
+	background-color: #fff;
+	border: 1px dashed #ccc;
+	font-weight: bold;
+	margin: 0;
+	overflow: auto;
+	padding: 0;
+	text-align: left;
+	width: 99%;
+	word-wrap: break-word;
+}
+code {
+	margin: 0;
+}
+select {
+	margin-right: 10px;
+}
+table {
+	margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #333;
+    border-collapse: collapse;
+    font-family: Verdana, sans-serif;
+}
+th, td {
+	padding: 10px;
+}	
+form {
+	clear: both;
+	margin: 0 auto 20px auto;
+}
+legend {
+	font-size: 16px;
+	font-weight: bold;
+}
+fieldset {
+	border: 1px solid #ccc;
+	padding: 20px;
+}
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+input {
+	/*margin-bottom: 20px;*/
+}
+button {
+	border: 0;
+	padding: 5px 10px 7px 10px;
+}
+textarea {
+	background-color: #fff;	
+	height: 100px;
+	width: 100%;
+}
+
+/* Layout & Helpers */
+.row {
+	margin: 0 auto 10px auto;
+	padding: 0 0 30px 0px;
+	width: 960px;
+}
+
+.row.first { padding: 20px 10px 40px 10px; }
+.row.last { padding: 20px 10px 120px 10px; }	
+
+.row img {
+	display: block;
+	margin: 0 auto 10px auto;
+}
+.column {
+	display: inline-block;
+	vertical-align: top;
+}
+.clearfix,
+.clearfix:after {
+	clear: both;
+	zoom: 1;
+}
+
+.dark-grey-background { color: #fff; background-color: #333; }
+.medium-grey-background { color: #fff; background-color: #999; }
+.light-grey-background { background-color: #ccc; }
+
+.border-bottom { border-bottom: 1px solid #eee; }
+.border-top { border-top: 1px solid #eee; }
+
+.display-inline-block { display: inline-block; }
+.display-block { display: block; } 
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+.margin-auto { margin: 0 auto; }
+
+.margin-left-twenty { margin-left: 20px; }
+.margin-right-twenty { margin-right: 20px; }
+.margin-top-twenty { margin-top: 20px; }
+.margin-bottom-twenty { margin-bottom: 20px; }
+
+.padding-top-twenty { padding-top: 20px; }
+.padding-bottom-thirty { padding-bottom: 30px; }
+
+.text-align-left { text-align: left; }
+.text-align-center { text-align: center; }
+.text-align-right { text-align: right; }
+
+.vertical-align-top { vertical-align: top; }
+.vertical-align-middle { vertical-align: middle; }
+.vertical-align-bottom { vertical-align: bottom; }
+
+.uppercase { text-transform: uppercase; }
+.lowercase { text-transform: lowercase; }
+
+/* Form Validation */
+label span {
+	color: red;
+}
+.win-fail-messages {
+	margin-bottom: 20px;
+	text-align: center;
+}
+.win-fail-messages p {
+	margin: 5px 0;
+	padding: 2px 0;
+}
+p.win {
+	background-color: #99cc99;
+	border: 1px solid #336633;
+	color: #336633;
+}
+p.fail {
+	background-color: #ffcccc;
+	border: 1px solid #993333;
+	color: #993333;
+}
+
+/* Project Specific */
+#header {
+	background-color: #333;
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+}
+#header h2 {
+	color: #eee;
+	margin: 0;
+	padding: 0;
+}	
+#header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#header ul li {
+	color: #fff;
+	display: inline-block;
+}
+#header ul li:after {
+	content: " | ";
+}
+#header ul li.last {
+	margin-right: 10px;
+}
+#header ul li.last:after {
+	content: none;
+}
+#header a {
+	color: #ccc;
+}
+#main {
+	padding-bottom: 120px;
+}
+#register-box form, 
+#login-box form {
+	background-color: #eee;
+	border: 1px solid #999;
+	padding: 5px 20px 40px 20px	;
+}
+#message-box {
+	width: 65%;
+}	
+#comment-box {
+	margin: 0;
+	width: 45%;
+}
+#message-box button,
+#comment-box button {
+	color: #fff;
+}
+
+#comment-box textarea {
+	height: 40px;
+}
+.messages-and-comments,
+.messages-and-comments ul {
+	list-style-type: none;
+}	
+.messages-and-comments {
+	padding: 10px 20px;
+}
+.messages-and-comments li {
+	margin: 0 0 20px 0;
+}	
+.messages-and-comments li h3,
+.messages-and-comments li h4 {
+	color: #333;
+	margin: 0 0 10px 0;
+}
+.messages-and-comments li li {
+	background-color: #eee;
+	border-left: 3px solid #999;
+	margin: 0 80px 20px 0;
+	padding: 10px 20px 20px 10px;
+}	
+.half-width {
+	width: 44%;
+}
+
+
+

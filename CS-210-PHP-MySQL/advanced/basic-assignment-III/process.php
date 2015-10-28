@@ -43,7 +43,7 @@ if($_POST['action'] == "entered_casino") {
 	$_SESSION['total_gold_value'] += $casino_number;
 }
 elseif($_POST['action'] == "reset") {
-	session_unset();
+	$this->session->unset_userdata;
 	session_destroy();
 }	
 

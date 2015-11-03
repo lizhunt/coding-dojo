@@ -124,34 +124,7 @@ function login_user($post) {
 	  		header('location: register-login.php');
 			die();
 
-	 }
-
-	// $query = "SELECT * FROM users 
-	//           WHERE users.password = '{$post['password']}' 
-	// 		     AND users.email = '{$post['email']}'";
-
-	// $user = fetch($query);	// Grab user with above credentials
-	
-	// if(count($user) > 0) {
-
-		// $_SESSION['user_id'] = $user[0]['id'];
-		// $_SESSION['first_name'] = $user[0]['first_name'];
-		// $_SESSION['last_name'] = $user[0]['last_name'];
-		// $_SESSION['logged_in'] = TRUE;
-
-	// 	header('location: index.php');
-
-	// } else {
-		
-	// 	$_SESSION['errors'][] = "Sorry! We can't seem to find a user with those credentials. ";
-		
-	// 	header('location: register-login.php');
-	// 	die();
-
-	// }	  
-
-	// echo $query;
-	// die();		  
+	 }	  
 
 }
 

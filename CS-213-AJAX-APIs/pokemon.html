@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gotta Catch'em All</title>
+        <style>
+            body {
+                font-family: Verdana, Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            h1, h2, h3, h4 {
+                font-family: Georgia, 'Times New Roman', serif;
+                font-weight: normal;
+            }
+            h1 {
+                color: #333;
+                text-align: center;
+                font-size: 3em;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                display: inline-block;
+                list-style-type: none;
+                margin: 0 20px 20px 0;
+                padding: 0;
+                vertical-align: middle;
+            }
+            #pokemon {
+                margin: 0 auto;
+                width: 960px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $.get("http://pokeapi.co/api/v1/", function(res) { console.log(res);
+                    var html_str = "";
+                    html_str += "<h1>Gotta Catch 'Em All</h1>";
+                    html_str += "<ul>"; 
+                    for(var i = 1; i < 200; i++) {
+                        html_str += "<li><img id='" + [i] + "' src='http://pokeapi.co/media/img/" + [i] + ".png'/></li>";
+                    }
+                    html_str += "</ul>";
+                    $("#pokemon").html(html_str);
+                }, "json");
+            })
+        </script>
+    </head>
+    <body>
+        <div id="pokemon">
+        </div>
+    </body>
+</html>

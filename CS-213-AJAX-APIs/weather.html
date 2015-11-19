@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Weather App | Coding Dojo AJAX/API Assignment</title>
+        <style>
+            body {
+                font-family: Verdana, Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            h1, h2, h3, h4 {
+                font-family: Georgia, 'Times New Roman', serif;
+                font-weight: normal;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+            h1 {
+                color: #333;
+                font-size: 3em;
+            }
+            form {
+            	margin: 0 auto;
+            	width: 50%;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                display: inline-block;
+                list-style-type: none;
+                margin: 0 20px 20px 0;
+                padding: 0;
+                vertical-align: middle;
+            }
+            .row {
+                margin: 0 auto;
+                width: 960px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script>
+
+        	$(document).ready(function(){
+
+        		// Remove the validation message if it's set
+       //  		$('#query').focus(function(){
+			      
+			    //   var full = $("#results").has("p").length ? true : false;
+			      
+			    //   if(full == false){
+			    //      $('#results').empty();
+			    //   }
+
+			   	// });
+
+        		// Define a function that will fetch our data
+        		// var getWeather = function(){
+
+          //       	var city = $('#query').val();
+
+          //           if(city == ''){
+          //           	$('#results').html('<p>Where ya headed?</p>');
+          //           } 
+          //           else {
+                    	
+          //           	$('#result').html('<p class="loading">Hang tight while we grab you some weather!</p>');
+
+                $('form').submit(function() {   
+
+                	var city = $('#query').val();
+
+                    if(city == ''){
+                    	$('#results').html('<p>Where ya headed?</p>');
+                    } 
+                    else {
+                    	
+                    	$('#result').html('<p class="loading">Hang tight while we grab you some weather!</p>'); 	
+
+		                // Set up our API to get the data from our previously-defined function   
+		                $.get("http://api.openweathermap.org/data/2.5/weather?q=" + city + "&APPID=1432780f37e1246bc597282c1c7ad9c2", function(data) { 
+		                    
+		                    console.log(data);
+
+		                    var block = "";
+
+                            block += $('#results').html("<p>" + data.name. + "</p>");
+
+		                    // if(data != "Nothing found."){
+
+		                    	// $.each(data.object, function(index, cityWeather){
+
+		                    	// 	block += $('#results').html("<p>" + cityWeather.name + "</p>");
+		                    	// })
+
+		                	// } else {
+
+		                	// 	console.log(data);
+
+		                	// 	$('#results').html("<p>Oops! Either you spelled that wrong, or you just discovered a new city we don't know about!</p>");
+		                	// }
+
+		                	$("#results").html(block);
+	
+                		}, "json");
+                	}
+
+                	return false;
+                })
+
+       //          $('#search').click(getWeather);
+			    
+			    // $('#query').keyup(function(event){
+			    //     if(event.keyCode == 13){
+			    //        getWeather();
+			    //     }
+			    // });		
+
+            })
+        </script>
+    </head>
+    <body>
+		<div class="row">
+			<h1>What's the Weather like in ...?</h1>
+			<form>
+				<input id="query" type="text" placeholder="Enter a city name"/>
+				<input type="submit" id="search" value="Tell Me the Weather"/>
+			</form>	
+		</div>
+		<div id="results" class="row">
+		</div>	
+    </body>
+</html>
